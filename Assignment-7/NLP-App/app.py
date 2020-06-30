@@ -31,27 +31,29 @@ def Predictor():
     st.image('data/spam_ham.jpg')
     models=['Logistic Regression','Decission Tree','SVM']
     model=st.sidebar.selectbox("Choose Model to Use: ",models)
+    result='Prediction shall be made here . . .'
     if model==models[0]:
         st.subheader('Logistic Predictor')
         txt=st.text_input('Enter message here')
-        st.info('Entered message is '+v.Logistic_pred(txt))
+        if txt!='':
+            result='Entered message is '+v.Logistic_pred(txt)
 
     if model==models[1]:
         st.subheader('Decission Tree Predictor')
         txt=st.text_input('Enter message here')
-        st.info('Entered message is '+v.Decission_tree_pred(txt))
+        if txt!='':
+            result='Entered message is '+v.Decission_tree_pred(txt)
 
     if model==models[2]:
         st.subheader('SVM Predictor')
         txt=st.text_input('Enter message here')
-        st.info('Entered message is '+v.SVM_pred(txt))
+        if txt!='':
+            result='Entered message is '+v.SVM_pred(txt)
+
+    st.info(result)
 
 def main():
     st.title("Spam-Ham Detector")
-
-    st.sidebar.warning("<> with :heart: for **Cipherschools**")
-    st.sidebar.error("Checkout [Github](https://github.com/rak3n/CIPHERSCHOOLS_Assignments/Assignment-7/NLP-App) for **Source**")
-
     st.sidebar.header('Choose a option option')
 
     type=st.sidebar.selectbox(
@@ -63,6 +65,10 @@ def main():
         EDA()
     else:
         Predictor()
+
+    st.sidebar.warning("<> with :heart: for **Cipherschools**")
+    st.sidebar.error("Checkout [Github](https://github.com/rak3n/CIPHERSCHOOLS_Assignments/tree/master/Assignment-7/NLP-App) for **Source**")
+
 
 
 if __name__=="__main__":
