@@ -50,7 +50,7 @@ def main():
     st.title("Spam-Ham Detector")
 
     st.sidebar.warning("<> with :heart: for **Cipherschools**")
-    st.sidebar.error("Checkout [Github](https://github.com/rak3n/CIPHERSCHOOLS_Assignments/Assignment-7/NLP-App) for **Source***")
+    st.sidebar.error("Checkout [Github](https://github.com/rak3n/CIPHERSCHOOLS_Assignments/Assignment-7/NLP-App) for **Source**")
 
     st.sidebar.header('Choose a option option')
 
